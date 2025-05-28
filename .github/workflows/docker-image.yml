@@ -20,7 +20,7 @@ jobs:
     - name: Build the Docker image
       run: docker build -t emp .
     - name: Tag the Docker image
-      run: docker tag omkarpadmane/emp
+      run: docker tag emp omkarpadmane/emp_manag
     - name: Docker login
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
     - name: Docker image push
