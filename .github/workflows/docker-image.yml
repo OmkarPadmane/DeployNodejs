@@ -24,7 +24,7 @@ jobs:
     - name: Docker login
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
     - name: Docker image push
-      run: docker push omkarpadmane/emp
+      run: docker push omkarpadmane/emp_manag
 
 
     
