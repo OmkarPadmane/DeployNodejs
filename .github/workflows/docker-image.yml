@@ -18,13 +18,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build -t emp .
     - name: Tag the Docker image
-    - run: docker tag omkarpadmane/emp
+      run: docker tag omkarpadmane/emp
     - name: Docker login
-    - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
     - name: Docker image push
-    - run: docker push omkarpadmane/emp
+      run: docker push omkarpadmane/emp
 
 
     
